@@ -1,0 +1,13 @@
+<svg version="1.2" baseProfile="tiny-ps" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 36 36" width="36" height="36">
+	<defs>
+		<image width="36" height="36" id="img1" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAYAAADhAJiYAAACRUlEQVRYR82Y7XnUMBCEZyoAKgAqgFRAqAA6ACogVACpgFABUAGkApIK4CoAKoCrYHjmHinIsvURYzvsv5PvpFfj3dHqKOkDgGcYxg7AMcnf2fjqH1kA8sIvSBp202C+mqQLAI8AfCT5fFMaAFNAJwDeAtiTvP0/AN0D8D2APCZpxTaLkUJeWdIPAHcBvCNpxTaLEtAZgJebUfxdaF8COgbw5QaAxkkdISTZg24BeEXSiq0WifXsJhUKeRQN85KkFVstks2f1oDsQe8DxZ3ctcOukHvVjPGHAL6GdY5qQPagX+GLI9eWJD8jOZhjxvgbAK+j7xWBwmsruvaMhUsb+AbgQTwZWkBF114CSNLoLbSAiq69ENAoT6tANddeCChW8o6kk7vsQ4kfRdf+SdKKHWIhoOh1pySd3F1AqWvfJ+lzzkCHXmlu2Usaljvp5G4DhcUXd21Jg3KPyjdzKHPtfWhtD7uZG5Ks+udwNA0awV6gpwA+zQVo/G7Qc/UCpeW5FJfVPsn79l4gy/sEwDlJq7VaNIGm3HQ1mp4qk1Q99ZeG61Fos9dV9aHgE1bHzf4a4aQ+iw5d9SFJsSVYAySf8+ocm1QocVA/P/cuwgxuRVxp+XgLuvS7dLx8liX97ajEJcV86r7VXne+vP1MG6bRrTVY/uF6lLeuUzJlltE1Xw3oiOEEjov9I1DXfFN/NsST/eZfmZUoJLUh3S7EpL5KwlZGX3e+0lW6VvaDMm0BhU12z1e7l1kRl6av045JI+sBSpRvzvcHRSGmlJ1832QAAAAASUVORK5CYII="/>
+	</defs>
+	<style>
+		tspan { white-space:pre }
+	</style>
+	<g id="Section 1">
+		<g id="Hover">
+			<use id="Cart icon copy" href="#img1" transform="matrix(1,0,0,1,0,0)"/>
+		</g>
+	</g>
+</svg>
