@@ -516,7 +516,7 @@ footer h3 {
     background-repeat: no-repeat;
     padding-top: 60px;
     margin-top: 90px;
-    padding-bottom: 10px;
+    padding-bottom: 90px;
 }
 
 .subscribe h2,
@@ -535,7 +535,7 @@ footer h3 {
 }
 
 footer {
-    padding-top: 30px;
+    padding-top: 20px;
 }
 
 footer h3 {
@@ -683,6 +683,7 @@ footer p {
         height: 550px;
         margin-top: 0;
         padding-top: 130px;
+        padding-bottom: 10px;
     }
 
 
