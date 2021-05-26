@@ -559,6 +559,7 @@ footer p {
     .food-slider__container {
         padding-top: 0;
     }
+
     .mobfix {
         padding-top: 0;
     }
@@ -620,10 +621,12 @@ footer p {
     .first-choice p {
         font-size: 24px;
     }
+
     .first-choice .first-choice__pre-header,
-    .order-food__text .order-food__pre-header{
+    .order-food__text .order-food__pre-header {
         font-size: 26px;
     }
+
     .order-food p {
         font-size: 24px;
         margin-bottom: 30px;
@@ -653,9 +656,6 @@ footer p {
         font-size: 38px;
     }
 
-    .order-food__text--buttons button:first-child {
-        margin: 0;
-    }
 
     .order-food__text {
         padding: 0 120px;
@@ -729,12 +729,17 @@ footer p {
     footer h3 {
         margin-bottom: 50px;
     }
+
     .brands img {
         width: auto;
     }
 }
 
 @media (min-width: 1360px) {
+    .order-food__text--buttons button:first-child {
+        margin: 0;
+    }
+
     header {
         display: flex;
     }
