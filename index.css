@@ -100,7 +100,7 @@ a {
 
 body p {
     font-family: "Roboto", serif;
-    font-weight: 300;
+    font-weight: 400;
 }
 
 header {
@@ -120,16 +120,20 @@ header {
 }
 
 .logo-link__logo {
-    background-image: url("img/header__logo.svg");
+    background-image: url("img/header__logo.png");
     background-size: contain;
     background-repeat: no-repeat;
     width: 110px;
     height: 26px;
 }
 
+.first-choice__card a {
+    width: fit-content;
+}
+
 .logo-link__label {
     font-size: 14px;
-    font-weight: lighter;
+    font-weight: 300;
     font-style: italic;
 }
 
@@ -174,7 +178,7 @@ nav {
     background-color: #fbfbfb;
     left: 36px;
     right: 36px;
-    padding: 36px 42px;
+    padding: 36px;
 }
 
 nav:before {
@@ -238,21 +242,21 @@ nav:before {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: fit-content;
 }
 
 .search div {
-    width: 200px;
+    width: 100%;
     margin-bottom: 10px;
 }
 
 .search a {
     display: inline-block;
-    width: 36px;
-    height: 36px;
+    width: 32px;
+    height: 32px;
     border: none;
     background-color: unset;
-    margin-right: 28px;
+    background-size: cover;
+    margin-right: 18px;
     flex-shrink: 0;
     padding: 0;
 }
@@ -267,8 +271,10 @@ nav:before {
 
 .search label {
     position: relative;
-    display: inline-block;
+    display: inline-flex;
     height: fit-content;
+    width: 100%;
+    flex-grow: 1;
 }
 
 .search label:after {
@@ -282,11 +288,12 @@ nav:before {
 }
 
 .search input {
+    display: flex;
     border: none;
     background-color: #fbfbfb;
     border-bottom: 1px solid;
     font-size: 18px;
-    max-width: 200px;
+    width: 100%;
 }
 
 .under-header {
@@ -355,6 +362,8 @@ nav:before {
 .first-choice .first-choice__about-card {
     font-size: 21px;
     margin-bottom: 60px;
+    color: #000;
+    text-align: center;
 }
 
 .container {
@@ -413,6 +422,7 @@ nav:before {
     font-size: 20px;
     color: white;
     font-weight: 700;
+    z-index: 1;
 }
 
 .first-choice__image:hover button {
@@ -604,10 +614,6 @@ footer h3 {
     font-weight: bold;
 }
 
-.order-food div {
-    max-width: 100%;
-}
-
 .brands {
     background-color: #f4f4f4;
     min-height: 230px;
@@ -700,20 +706,19 @@ footer a {
     padding-top: 20px;
 }
 
-@media (min-width: 500px) {
+@media (min-width: 425px) {
+
     .search {
         flex-direction: row;
+        padding: 0;
     }
 
     .search div {
-        width: auto;
-        margin-bottom: 0;
+        width: fit-content;
+        display: flex;
     }
 
-    .navigation,
-    .search {
-        padding: 0 28px;
-    }
+
 
     .navigation .active a {
         color: #ff5555;
@@ -883,7 +888,7 @@ footer a {
 
 
     .order-food__text {
-        padding: 0 80px;
+        padding: 0 62px;
     }
 
     .food-slider__container h2 {
@@ -956,7 +961,7 @@ footer a {
     }
 }
 
-@media (min-width: 1360px) {
+@media (min-width: 1300px) {
     .search {
         padding: 0;
     }
@@ -1025,7 +1030,9 @@ footer a {
         padding-left: calc(50% - 750px);
         padding-right: calc(50% - 750px);
     }
-
+    .first-choice {
+        padding: 0 10px;
+    }
     .first-choice__cards {
         display: flex;
 
@@ -1052,11 +1059,8 @@ footer a {
     }
 
     .order-food__image {
-        flex-shrink: 0;
         margin-bottom: 0;
-        display: flex;
-        flex-direction: column;
-        width: 590px;
+        width: 560px;
     }
 
     .order-food__text--buttons button {
