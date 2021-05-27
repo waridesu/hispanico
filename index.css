@@ -123,12 +123,12 @@ header {
     background-image: url("img/header__logo.svg");
     background-size: contain;
     background-repeat: no-repeat;
-    width: 100px;
-    height: 18px;
+    width: 110px;
+    height: 26px;
 }
 
 .logo-link__label {
-    font-size: 10px;
+    font-size: 14px;
     font-weight: lighter;
     font-style: italic;
 }
@@ -291,7 +291,7 @@ nav:before {
 
 .under-header {
     height: 430px;
-    background-image: url("img/under-header.png");
+    background-image: url("img/under-header.jpg");
     background-position: center;
     background-size: cover;
     display: flex;
@@ -349,6 +349,7 @@ nav:before {
 }
 
 .first-choice p {
+    text-align: justify;
     font-size: 21px;
 }
 
@@ -454,9 +455,9 @@ nav:before {
     height: 130px;
     border-radius: 50%;
     border: none;
-    margin-top: 28px;
+    margin-top: 18px;
     margin-left: auto;
-    margin-right: 36px;
+    margin-right: 16px;
     background-color: #333728;
     color: white;
     font-size: 28px;
@@ -491,6 +492,10 @@ footer h3 {
     background-repeat: no-repeat;
     width: 310px;
     height: 310px;
+}
+
+.order-food__text p {
+    text-align: justify;
 }
 
 .order-food__text--buttons {
@@ -539,6 +544,11 @@ footer h3 {
     border: 2px solid #000;
 }
 
+.footer-container a {
+    display: block;
+    color: #fff;
+}
+
 .footer__social-icon a {
     display: inline-flex;
     background-position: center;
@@ -556,6 +566,7 @@ footer h3 {
     background-image: url("img/subscribe-today.jpg");
     background-position: center;
     background-size: 100%;
+    text-align: center;
 }
 
 .subscribe label {
@@ -679,8 +690,10 @@ footer h3 {
     margin-top: 40px;
 }
 
-footer p {
+footer p,
+footer a {
     font-size: 21px;
+    font-weight: 300;
     margin: 0;
 }
 
@@ -819,7 +832,7 @@ footer p {
     .under-header {
         flex-direction: row;
         height: 700px;
-        background-image: url("img/underHeader__dekstop.png");
+        background-image: url("img/underHeader__dekstop.jpg");
         background-repeat: no-repeat;
         background-size: cover;
     }
@@ -933,7 +946,8 @@ footer p {
     }
 
 
-    footer p {
+    footer p,
+    footer a {
         font-size: 26px;
         margin: 6px 0;
     }
