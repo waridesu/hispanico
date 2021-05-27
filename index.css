@@ -349,7 +349,6 @@ nav:before {
 }
 
 .first-choice p {
-    text-align: justify;
     font-size: 21px;
 }
 
@@ -492,10 +491,6 @@ footer h3 {
     background-repeat: no-repeat;
     width: 310px;
     height: 310px;
-}
-
-.order-food__text p {
-    text-align: justify;
 }
 
 .order-food__text--buttons {
