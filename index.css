@@ -363,10 +363,13 @@ nav:before {
 }
 
 .first-choice__download {
-    width: fit-content;
-    display: block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     font-size: 18px;
-    padding: 28px 54px;
+    height: 60px;
+    width: 100%;
+    max-width: 360px;
     border: none;
     background-color: #2e2e2e;
     color: #fff;
