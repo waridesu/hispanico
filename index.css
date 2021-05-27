@@ -1,8 +1,29 @@
 @font-face {
     font-family: 'Roboto';
+    src: local('Roboto Thin'), local('Roboto-Thin'), url('font/Robotothin.woff2') format('woff2'), url('font/Robotothin.woff') format('woff'), url('font/Robotothin.ttf') format('truetype');
+    font-weight: 100;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: local('Roboto Thin Italic'), local('Roboto-ThinItalic'), url('font/Robotothinitalic.woff2') format('woff2'), url('font/Robotothinitalic.woff') format('woff'), url('font/Robotothinitalic.ttf') format('truetype');
+    font-weight: 100;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Roboto';
     src: local('Roboto Light'), local('Roboto-Light'), url('font/Robotolight.woff2') format('woff2'), url('font/Robotolight.woff') format('woff'), url('font/Robotolight.ttf') format('truetype');
     font-weight: 300;
     font-style: normal;
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: local('Roboto Light Italic'), local('Roboto-LightItalic'), url('font/Robotolightitalic.woff2') format('woff2'), url('font/Robotolightitalic.woff') format('woff'), url('font/Robotolightitalic.ttf') format('truetype');
+    font-weight: 300;
+    font-style: italic;
 }
 
 @font-face {
@@ -14,9 +35,51 @@
 
 @font-face {
     font-family: 'Roboto';
+    src: local('Roboto Italic'), local('Roboto-Italic'), url('font/Robotoitalic.woff2') format('woff2'), url('font/Robotoitalic.woff') format('woff'), url('font/Robotoitalic.ttf') format('truetype');
+    font-weight: 400;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: local('Roboto Medium'), local('Roboto-Medium'), url('font/Robotomedium.woff2') format('woff2'), url('font/Robotomedium.woff') format('woff'), url('font/Robotomedium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: local('Roboto Medium Italic'), local('Roboto-MediumItalic'), url('font/Robotomediumitalic.woff2') format('woff2'), url('font/Robotomediumitalic.woff') format('woff'), url('font/Robotomediumitalic.ttf') format('truetype');
+    font-weight: 500;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Roboto';
     src: local('Roboto Bold'), local('Roboto-Bold'), url('font/Robotobold.woff2') format('woff2'), url('font/Robotobold.woff') format('woff'), url('font/Robotobold.ttf') format('truetype');
     font-weight: 700;
     font-style: normal;
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: local('Roboto Bold Italic'), local('Roboto-BoldItalic'), url('font/Robotobolditalic.woff2') format('woff2'), url('font/Robotobolditalic.woff') format('woff'), url('font/Robotobolditalic.ttf') format('truetype');
+    font-weight: 700;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: local('Roboto Black'), local('Roboto-Black'), url('font/Robotoblack.woff2') format('woff2'), url('font/Robotoblack.woff') format('woff'), url('font/Robotoblack.ttf') format('truetype');
+    font-weight: 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: local('Roboto Black Italic'), local('Roboto-BlackItalic'), url('font/Robotoblackitalic.woff2') format('woff2'), url('font/Robotoblackitalic.woff') format('woff'), url('font/Robotoblackitalic.ttf') format('truetype');
+    font-weight: 900;
+    font-style: italic;
 }
 
 body {
@@ -27,8 +90,17 @@ body {
     background-color: #fbfbfb;
 }
 
+button {
+    cursor: pointer;
+}
+
+a {
+    text-decoration: none
+}
+
 body p {
     font-family: "Roboto", serif;
+    font-weight: 300;
 }
 
 header {
@@ -57,6 +129,8 @@ header {
 
 .logo-link__label {
     font-size: 10px;
+    font-weight: lighter;
+    font-style: italic;
 }
 
 .burger {
@@ -96,7 +170,7 @@ header {
 nav {
     display: none;
     position: absolute;
-    top: 130px;
+    top: 110px;
     background-color: #fbfbfb;
     left: 36px;
     right: 36px;
@@ -130,7 +204,7 @@ nav:before {
 .navigation li {
     flex: 1 0 50%;
     font-size: 20px;
-    font-weight: bold;
+    font-weight: bolder;
     margin-bottom: 26px;
 }
 
@@ -164,6 +238,7 @@ nav:before {
     display: flex;
     flex-direction: column;
     align-items: center;
+    width: fit-content;
 }
 
 .search div {
@@ -171,7 +246,7 @@ nav:before {
     margin-bottom: 10px;
 }
 
-.search button {
+.search a {
     display: inline-block;
     width: 36px;
     height: 36px;
@@ -182,11 +257,11 @@ nav:before {
     padding: 0;
 }
 
-.search button:first-child {
+.search a:first-child {
     background-image: url("img/header__user.png");
 }
 
-.search button:nth-child(2) {
+.search a:nth-child(2) {
     background-image: url("img/header__truck.png");
 }
 
@@ -208,6 +283,7 @@ nav:before {
 
 .search input {
     border: none;
+    background-color: #fbfbfb;
     border-bottom: 1px solid;
     font-size: 18px;
     max-width: 200px;
@@ -233,6 +309,7 @@ nav:before {
     margin: auto;
     font-size: 24px;
     font-weight: bold;
+    background-color: rgba(255, 255, 255, 0.5);;
 }
 
 .under-header__button span {
@@ -240,7 +317,7 @@ nav:before {
     justify-content: center;
     align-items: center;
     height: 80px;
-    width: 370px;
+    width: calc(100% - 10px);
 
 }
 
@@ -286,6 +363,7 @@ nav:before {
 }
 
 .first-choice__download {
+    width: fit-content;
     display: block;
     font-size: 18px;
     padding: 28px 54px;
@@ -304,12 +382,23 @@ nav:before {
 }
 
 .first-choice__image {
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
     height: 330px;
     width: 100%;
     background-size: cover;
+}
+
+.first-choice__image:hover:before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    content: '';
+    background-color: rgba(0, 0, 0, 0.2);
 }
 
 .first-choice__image button {
@@ -350,7 +439,7 @@ nav:before {
 
 .order-food__image {
     background-size: cover;
-    height: 580px;
+    padding-bottom: 100%;
     width: 100%;
 }
 
@@ -368,6 +457,8 @@ nav:before {
     background-color: #333728;
     color: white;
     font-size: 28px;
+    font-family: "Roboto", serif;
+    font-weight: lighter;
 }
 
 footer {
@@ -391,7 +482,7 @@ footer h3 {
     align-items: center;
 }
 
-.food-slider__item div {
+.food-slider__item a {
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
@@ -433,7 +524,7 @@ footer h3 {
     text-align: center;
 }
 
-.food-slider__container a {
+.food-slider__container-button {
     display: inline-block;
     color: #000;
     font-size: 22px;
@@ -477,7 +568,7 @@ footer h3 {
 
 .subscribe button {
     color: #fff;
-    background-color: #ffb10d;
+    background-color: rgba(255, 177, 13, .7);
 }
 
 .food-slider__container .splide__arrow {
@@ -537,9 +628,11 @@ footer h3 {
 .food-slider__container p {
     font-size: 24px;
     width: 50%;
+    margin: auto;
+
 }
 
-.food-slider__container a {
+.food-slider__container-button {
     margin-top: 20px;
     margin-bottom: 0;
 }
@@ -606,8 +699,13 @@ footer p {
         margin-bottom: 0;
     }
 
-    .navigation {
+    .navigation,
+    .search {
         padding: 0 28px;
+    }
+
+    .navigation .active a {
+        color: #ff5555;
     }
 
     .under-header__button {
@@ -633,9 +731,48 @@ footer p {
 }
 
 @media (min-width: 768px) {
+    nav {
+        top: 140px;
+    }
+
+    footer.container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+
+    .footer-container {
+        width: 50%;
+    }
+
+    .first-choice__cards {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+
+    .first-choice__card {
+        flex: 0 0 calc(50% - 36px);
+    }
+
+    .brands {
+        column-gap: 20px;
+        justify-content: center;
+    }
+
+    .under-header {
+        align-items: center;
+        justify-content: space-evenly;
+    }
+
+    .under-header button {
+        margin: 0;
+    }
+
     .logo-link__label {
         font-size: 18px;
     }
+
     .food-slider__container {
         padding-top: 0;
     }
@@ -650,7 +787,7 @@ footer p {
 
     .subscribe input,
     .subscribe button {
-        font-size: 30px;
+        font-size: 24px;
     }
 
     .first-choice {
@@ -728,9 +865,6 @@ footer p {
         width: 320px;
     }
 
-    footer {
-        display: flex;
-    }
 
     footer h3 {
         font-size: 38px;
@@ -738,7 +872,7 @@ footer p {
 
 
     .order-food__text {
-        padding: 0 120px;
+        padding: 0 80px;
     }
 
     .food-slider__container h2 {
@@ -746,7 +880,7 @@ footer p {
         padding: 40px 0;
     }
 
-    .food-slider__item div {
+    .food-slider__item a {
         height: 400px;
     }
 
@@ -779,6 +913,7 @@ footer p {
     }
 
     .subscribe input {
+        background-color: rgba(255, 255, 255, 0.7);
         width: 380px;
     }
 
@@ -790,17 +925,10 @@ footer p {
         padding-top: 20px;
     }
 
-    .second a {
+    .second .food-slider__container-button {
         margin: 20px auto 90px;
     }
 
-    footer.container {
-        justify-content: space-between;
-        padding-top: 30px;
-        padding-bottom: 100px;
-        padding-left: calc(50% - 740px);
-        padding-right: calc(50% - 740px);
-    }
 
     footer p {
         font-size: 26px;
@@ -817,6 +945,24 @@ footer p {
 }
 
 @media (min-width: 1360px) {
+    .search {
+        padding: 0;
+    }
+
+    footer.container {
+        display: flex;
+        justify-content: space-between;
+        padding-top: 30px;
+        padding-bottom: 100px;
+        padding-left: calc(50% - 740px);
+        padding-right: calc(50% - 740px);
+    }
+
+    .footer-container {
+        width: unset;
+        padding: 0 10px;
+    }
+
     .order-food__text--buttons button:first-child {
         margin: 0;
     }
@@ -899,7 +1045,6 @@ footer p {
         display: flex;
         flex-direction: column;
         width: 590px;
-        height: 100%;
     }
 
     .order-food__text--buttons button {

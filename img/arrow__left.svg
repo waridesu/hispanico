@@ -1,20 +1,9 @@
-<svg version="1.2" baseProfile="tiny-ps" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 34 67" width="34" height="67">
-	<title>Section 3</title>
-	<defs>
-		<linearGradient id="grd1" gradientUnits="userSpaceOnUse"  x1="17" y1="66.854" x2="17" y2="33.146">
-			<stop offset="0" stop-color="#000000"  />
-			<stop offset="1" stop-color="#ffffff"  />
-		</linearGradient>
-	</defs>
+<svg version="1.2" baseProfile="tiny-ps" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 36 69" width="36" height="69">
+	<title>Shape 11 copy 3</title>
 	<style>
 		tspan { white-space:pre }
-		.shp0 { fill: url(#grd1) } 
-		.shp1 { fill: #575757 } 
+		.shp0 { fill: #575757 } 
 	</style>
-	<g id="Section 3">
-		<g id="Arrow RIght copy">
-			<path id="Shape 11 copy 2" class="shp0" d="M33.85 66.15L33.15 66.85L0.15 33.85L0.85 33.15L33.85 66.15Z" />
-			<path id="Shape 11 copy 3" class="shp1" d="M33.15 0.15L33.85 0.85L0.85 33.85L0.15 33.15L33.15 0.15Z" />
-		</g>
-	</g>
+	<path id="Shape 11 copy 2" class="shp0" d="M34.85 67.15L34.15 67.85L1.15 34.85L1.85 34.15L34.85 67.15Z" />
+	<path id="Shape 11 copy 3" class="shp0" d="M34.15 1.15L34.85 1.85L1.85 34.85L1.15 34.15L34.15 1.15Z" />
 </svg>
