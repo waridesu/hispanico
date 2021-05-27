@@ -1,8 +1,30 @@
+@font-face {
+    font-family: 'Roboto';
+    src: local('Roboto Light'), local('Roboto-Light'), url('font/Robotolight.woff2') format('woff2'), url('font/Robotolight.woff') format('woff'), url('font/Robotolight.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: local('Roboto'), local('Roboto-Regular'), url('font/Roboto.woff2') format('woff2'), url('font/Roboto.woff') format('woff'), url('font/Roboto.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: local('Roboto Bold'), local('Roboto-Bold'), url('font/Robotobold.woff2') format('woff2'), url('font/Robotobold.woff') format('woff'), url('font/Robotobold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+}
+
 body {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
     font-family: 'Roboto', sans-serif;
+    background-color: #fbfbfb;
 }
 
 body p {
@@ -16,6 +38,7 @@ header {
 .mobile-header {
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
 
 .logo-link {
@@ -25,11 +48,15 @@ header {
 }
 
 .logo-link__logo {
-    background-image: url("img/header_logo.png");
+    background-image: url("img/header__logo.svg");
     background-size: contain;
     background-repeat: no-repeat;
-    width: 120px;
-    height: 32px;
+    width: 100px;
+    height: 18px;
+}
+
+.logo-link__label {
+    font-size: 10px;
 }
 
 .burger {
@@ -70,7 +97,7 @@ nav {
     display: none;
     position: absolute;
     top: 130px;
-    background-color: white;
+    background-color: #fbfbfb;
     left: 36px;
     right: 36px;
     padding: 36px 42px;
@@ -96,7 +123,7 @@ nav:before {
     display: flex;
     flex-wrap: wrap;
     list-style: none;
-    padding: 0 28px;
+    padding: 0;
     margin: 0;
 }
 
@@ -105,6 +132,11 @@ nav:before {
     font-size: 20px;
     font-weight: bold;
     margin-bottom: 26px;
+}
+
+.navigation a {
+    text-decoration: none;
+    color: #000;
 }
 
 .navigation li:nth-child(2) {
@@ -130,10 +162,17 @@ nav:before {
 .search {
     margin-top: 34px;
     display: flex;
+    flex-direction: column;
     align-items: center;
 }
 
+.search div {
+    width: 200px;
+    margin-bottom: 10px;
+}
+
 .search button {
+    display: inline-block;
     width: 36px;
     height: 36px;
     border: none;
@@ -178,6 +217,7 @@ nav:before {
     height: 430px;
     background-image: url("img/under-header.png");
     background-position: center;
+    background-size: cover;
     display: flex;
     flex-direction: column;
 }
@@ -188,10 +228,10 @@ nav:before {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 380px;
+    width: 310px;
     height: 90px;
     margin: auto;
-    font-size: 30px;
+    font-size: 24px;
     font-weight: bold;
 }
 
@@ -236,7 +276,7 @@ nav:before {
 }
 
 .first-choice .first-choice__about-card {
-    font-size: 29px;
+    font-size: 21px;
     margin-bottom: 60px;
 }
 
@@ -268,7 +308,7 @@ nav:before {
     align-items: center;
     justify-content: center;
     height: 330px;
-    min-width: 340px;
+    width: 100%;
     background-size: cover;
 }
 
@@ -430,8 +470,8 @@ footer h3 {
 
 .subscribe input,
 .subscribe button {
-    padding: 18px;
-    font-size: 16px;
+    padding: 14px;
+    font-size: 14px;
     border: none;
 }
 
@@ -536,6 +576,7 @@ footer h3 {
 
 footer {
     padding-top: 20px;
+    padding-bottom: 20px;
 }
 
 footer h3 {
@@ -555,7 +596,46 @@ footer p {
     padding-top: 20px;
 }
 
+@media (min-width: 500px) {
+    .search {
+        flex-direction: row;
+    }
+
+    .search div {
+        width: auto;
+        margin-bottom: 0;
+    }
+
+    .navigation {
+        padding: 0 28px;
+    }
+
+    .under-header__button {
+        width: 380px;
+        height: 90px;
+    }
+
+    .subscribe input,
+    .subscribe button {
+        padding: 18px;
+        font-size: 16px;
+        border: none;
+    }
+
+    .first-choice__image {
+        width: 340px;
+    }
+
+    .first-choice .first-choice__about-card {
+        font-size: 29px;
+    }
+
+}
+
 @media (min-width: 768px) {
+    .logo-link__label {
+        font-size: 18px;
+    }
     .food-slider__container {
         padding-top: 0;
     }
