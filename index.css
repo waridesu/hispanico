@@ -128,7 +128,10 @@ header {
 }
 
 .first-choice__card a {
-    width: fit-content;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .logo-link__label {
@@ -401,6 +404,7 @@ nav:before {
     height: 330px;
     width: 100%;
     background-size: cover;
+    background-position: center;
 }
 
 .first-choice__image:hover:before {
@@ -962,6 +966,10 @@ footer a {
 }
 
 @media (min-width: 1300px) {
+    .first-choice p {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
     .search {
         padding: 0;
     }
@@ -1030,9 +1038,6 @@ footer a {
         padding-left: calc(50% - 750px);
         padding-right: calc(50% - 750px);
     }
-    .first-choice {
-        padding: 0 10px;
-    }
     .first-choice__cards {
         display: flex;
 
@@ -1041,17 +1046,16 @@ footer a {
 
     .first-choice__card {
         flex-direction: column;
+        justify-content: flex-start;
         flex: 0 0 calc(25% - 36px);
         margin: 0 18px;
     }
-
+    .first-choice__card a,
+    .first-choice__image {
+        width: 100%;
+    }
     .first-choice__card p {
         font-size: 29px;
-    }
-
-    .first-choice__image {
-        min-width: max-content;
-        width: 100%;
     }
 
     .order-food {
