@@ -95,12 +95,18 @@ button {
 }
 
 a {
-    text-decoration: none
+    text-decoration: none;
+    color: #000;
 }
 
 body p {
     font-family: "Roboto", serif;
     font-weight: 400;
+}
+
+.container {
+    padding-left: 36px;
+    padding-right: 36px;
 }
 
 header {
@@ -127,12 +133,6 @@ header {
     height: 26px;
 }
 
-.first-choice__card a {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
 
 .logo-link__label {
     font-size: 14px;
@@ -210,14 +210,10 @@ nav:before {
 
 .navigation li {
     flex: 1 0 50%;
-    font-size: 20px;
+    font-size: 18px;
     font-weight: bolder;
     margin-bottom: 26px;
-}
-
-.navigation a {
-    text-decoration: none;
-    color: #000;
+    color: #fff;
 }
 
 .navigation li:nth-child(2) {
@@ -256,20 +252,8 @@ nav:before {
     display: inline-block;
     width: 32px;
     height: 32px;
-    border: none;
-    background-color: unset;
     background-size: cover;
     margin-right: 18px;
-    flex-shrink: 0;
-    padding: 0;
-}
-
-.search a:first-child {
-    background-image: url("img/header__user.png");
-}
-
-.search a:nth-child(2) {
-    background-image: url("img/header__truck.png");
 }
 
 .search label {
@@ -284,7 +268,7 @@ nav:before {
     content: '';
     position: absolute;
     right: 0;
-    bottom: 0;
+    bottom: 1px;
     width: 23px;
     height: 23px;
     background-image: url("img/header_search.png");
@@ -295,6 +279,8 @@ nav:before {
     border: none;
     background-color: #fbfbfb;
     border-bottom: 1px solid;
+    height: 24px;
+    padding: 0;
     font-size: 18px;
     width: 100%;
 }
@@ -304,6 +290,7 @@ nav:before {
     background-image: url("img/under-header.jpg");
     background-position: center;
     background-size: cover;
+    background-repeat: no-repeat;
     display: flex;
     flex-direction: column;
 }
@@ -362,16 +349,16 @@ nav:before {
     font-size: 21px;
 }
 
-.first-choice .first-choice__about-card {
-    font-size: 21px;
-    margin-bottom: 60px;
-    color: #000;
-    text-align: center;
+.first-choice__card a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-.container {
-    padding-left: 36px;
-    padding-right: 36px;
+.first-choice .first-choice__about-card {
+    font-size: 24px;
+    margin-bottom: 60px;
+    text-align: center;
 }
 
 .first-choice__download {
@@ -392,8 +379,6 @@ nav:before {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
-
 }
 
 .first-choice__image {
@@ -478,35 +463,6 @@ nav:before {
     font-weight: lighter;
 }
 
-footer {
-    background-color: #2e2e1c;
-    color: white;
-}
-
-footer h3 {
-    font-size: 32px;
-}
-
-.footer__logo {
-    width: 185px;
-    height: 46px;
-    background-image: url("img/fotter__header.png");
-}
-
-.food-slider__item {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.food-slider__item a {
-    background-size: contain;
-    background-position: center;
-    background-repeat: no-repeat;
-    width: 310px;
-    height: 310px;
-}
-
 .order-food__text--buttons {
     position: absolute;
     bottom: 0;
@@ -535,6 +491,43 @@ footer h3 {
 
 .order-food__image {
     margin-bottom: 260px;
+}
+
+.order-food__pre-header {
+    font-weight: bold;
+}
+
+.order-food__text p {
+    font-size: 21px;
+}
+
+footer {
+    background-color: #2e2e1c;
+    color: white;
+}
+
+footer h3 {
+    font-size: 32px;
+}
+
+.footer__logo {
+    width: 185px;
+    height: 46px;
+    background-image: url("img/fotter__header.png");
+}
+
+.food-slider__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.food-slider__item a {
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 310px;
+    height: 310px;
 }
 
 .food-slider__container {
@@ -614,28 +607,6 @@ footer h3 {
     display: none;
 }
 
-.order-food__pre-header {
-    font-weight: bold;
-}
-
-.brands {
-    background-color: #f4f4f4;
-    min-height: 230px;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-between;
-    margin: 90px 0;
-}
-
-.brands img {
-    width: 30%;
-}
-
-.order-food__text p {
-    font-size: 21px;
-}
-
 .food-slider__container {
     padding-top: 60px;
 }
@@ -657,10 +628,20 @@ footer h3 {
 }
 
 .brands {
+    background-color: #f4f4f4;
+    min-height: 230px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    margin: 90px 0;
     row-gap: 40px;
     padding-top: 20px;
     padding-bottom: 20px;
-    margin-bottom: 0;
+}
+
+.brands img {
+    width: 30%;
 }
 
 .subscribe {
@@ -691,6 +672,10 @@ footer {
     padding-bottom: 20px;
 }
 
+.footer-container:not(:first-child) {
+    padding-top: 20px;
+}
+
 footer h3 {
     margin-top: 40px;
 }
@@ -706,9 +691,6 @@ footer a {
     margin-top: 20px;
 }
 
-.mobfix {
-    padding-top: 20px;
-}
 
 @media (min-width: 425px) {
 
@@ -723,7 +705,6 @@ footer a {
     }
 
 
-
     .navigation .active a {
         color: #ff5555;
     }
@@ -731,13 +712,6 @@ footer a {
     .under-header__button {
         width: 380px;
         height: 90px;
-    }
-
-    .subscribe input,
-    .subscribe button {
-        padding: 18px;
-        font-size: 16px;
-        border: none;
     }
 
     .first-choice__image {
@@ -748,36 +722,22 @@ footer a {
         font-size: 29px;
     }
 
+    .first-choice__card a {
+        width: fit-content;
+        align-self: center;
+    }
+
+    .subscribe input,
+    .subscribe button {
+        padding: 18px;
+        font-size: 16px;
+        border: none;
+    }
 }
 
 @media (min-width: 768px) {
     nav {
         top: 140px;
-    }
-
-    footer.container {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-around;
-    }
-
-    .footer-container {
-        width: 50%;
-    }
-
-    .first-choice__cards {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-around;
-    }
-
-    .first-choice__card {
-        flex: 0 0 calc(50% - 36px);
-    }
-
-    .brands {
-        column-gap: 20px;
-        justify-content: center;
     }
 
     .under-header {
@@ -793,21 +753,16 @@ footer a {
         font-size: 18px;
     }
 
-    .food-slider__container {
-        padding-top: 0;
+    .logo-link__logo {
+        width: 180px;
+        height: 52px;
     }
 
-    .mobfix {
-        padding-top: 0;
-    }
+    .under-header {
+        flex-direction: row;
+        height: 700px;
+        background-image: url("img/underHeader__dekstop.jpg");
 
-    .order-food__image--wrapper {
-        margin-top: 0;
-    }
-
-    .subscribe input,
-    .subscribe button {
-        font-size: 24px;
     }
 
     .first-choice {
@@ -828,19 +783,19 @@ footer a {
         padding-bottom: 120px;
     }
 
-    .logo-link__logo {
-        width: 180px;
-        height: 52px;
+    .first-choice p {
+        font-size: 24px;
     }
 
-    .under-header {
-        flex-direction: row;
-        height: 700px;
-        background-image: url("img/underHeader__dekstop.jpg");
-        background-repeat: no-repeat;
-        background-size: cover;
+    .first-choice__cards {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
     }
 
+    .first-choice__card {
+        flex: 0 0 calc(50% - 36px);
+    }
 
     .first-choice h2,
     .order-food h2 {
@@ -849,24 +804,32 @@ footer a {
         margin-top: 0;
     }
 
+    .first-choice .first-choice__pre-header,
+    .order-food__text .order-food__pre-header {
+        font-size: 26px;
+    }
+
     .order-food__pre-header {
         font-weight: bold;
         font-size: 26px;
         margin-bottom: 40px;
     }
 
-    .first-choice p {
-        font-size: 24px;
-    }
-
-    .first-choice .first-choice__pre-header,
-    .order-food__text .order-food__pre-header {
-        font-size: 26px;
+    .order-food__image--wrapper {
+        margin-top: 0;
     }
 
     .order-food p {
         font-size: 24px;
         margin-bottom: 30px;
+    }
+
+    .order-food__text {
+        padding: 0 62px;
+    }
+
+    .food-slider__container {
+        padding-top: 0;
     }
 
     .seller button {
@@ -876,23 +839,13 @@ footer a {
         font-size: 22px;
     }
 
-    .splide__list {
-        list-style: none;
-    }
-
     .seller-slider__item div {
         height: 250px;
         width: 320px;
     }
 
-
     footer h3 {
         font-size: 38px;
-    }
-
-
-    .order-food__text {
-        padding: 0 62px;
     }
 
     .food-slider__container h2 {
@@ -913,13 +866,21 @@ footer a {
         padding: 0 calc(50% - 700px);
     }
 
+    .brands {
+        column-gap: 20px;
+        justify-content: center;
+    }
+
+    .brands img {
+        width: auto;
+    }
+
     .subscribe {
         height: 550px;
         margin-top: 0;
         padding-top: 130px;
         padding-bottom: 10px;
     }
-
 
     .subscribe h2 {
         font-size: 53px;
@@ -930,6 +891,11 @@ footer a {
         margin-top: 10px;
         margin-bottom: 80px;
         font-size: 38px;
+    }
+
+    .subscribe input,
+    .subscribe button {
+        font-size: 24px;
     }
 
     .subscribe input {
@@ -949,7 +915,6 @@ footer a {
         margin: 20px auto 90px;
     }
 
-
     footer p,
     footer a {
         font-size: 26px;
@@ -960,36 +925,25 @@ footer a {
         margin-bottom: 50px;
     }
 
-    .brands img {
-        width: auto;
+    footer.container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+
+    .footer-container {
+        width: 50%;
+    }
+
+    .footer-container:not(:first-child) {
+        padding-top: 0;
     }
 }
 
 @media (min-width: 1300px) {
-    .first-choice p {
-        padding-left: 10px;
-        padding-right: 10px;
-    }
-    .search {
-        padding: 0;
-    }
-
-    footer.container {
-        display: flex;
-        justify-content: space-between;
-        padding-top: 30px;
-        padding-bottom: 100px;
-        padding-left: calc(50% - 740px);
-        padding-right: calc(50% - 740px);
-    }
-
-    .footer-container {
-        width: unset;
-        padding: 0 10px;
-    }
-
-    .order-food__text--buttons button:first-child {
-        margin: 0;
+    .container {
+        padding-left: calc(50% - 750px);
+        padding-right: calc(50% - 750px);
     }
 
     header {
@@ -1034,15 +988,15 @@ footer a {
         margin: 0;
     }
 
-    .container {
-        padding-left: calc(50% - 750px);
-        padding-right: calc(50% - 750px);
+    .first-choice p {
+        padding-left: 10px;
+        padding-right: 10px;
     }
+
     .first-choice__cards {
         display: flex;
 
     }
-
 
     .first-choice__card {
         flex-direction: column;
@@ -1050,12 +1004,25 @@ footer a {
         flex: 0 0 calc(25% - 36px);
         margin: 0 18px;
     }
+
     .first-choice__card a,
     .first-choice__image {
         width: 100%;
     }
-    .first-choice__card p {
-        font-size: 29px;
+
+    footer.container {
+        display: flex;
+        justify-content: space-between;
+        padding: 30px calc(50% - 740px) 100px;
+    }
+
+    .footer-container {
+        width: unset;
+        padding: 0 10px;
+    }
+
+    .order-food__text--buttons button:first-child {
+        margin: 0;
     }
 
     .order-food {
@@ -1086,5 +1053,4 @@ footer a {
         width: 180px;
         height: 180px;
     }
-
 }
